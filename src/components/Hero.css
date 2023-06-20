@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Italianno", sans-serif;
+}
+
+:root {
+    --mainColor: #ffffff;
+    --mainColorLight: #5767aa;
+    --secondaryColor: #d88dc2;
+    --textColor: #000000;
+}
+
+.hero__hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__back_video {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    float: left;
+}
+
+.hero__content {
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero__content h1 {
+    font-size: 160px;
+    color: var(--mainColor);
+    font-weight: 600;
+    transition: 0.5s;
+    letter-spacing: 2rem;
+}
+
+.hero__content h1:hover {
+    -webkit-text-stroke: 2px var(--secondaryColor);
+    color: transparent;
+}
+
+.hero__content a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--mainColor);
+    font-size: 2rem;
+    border: 2px solid var(--mainColor);
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1320px) {
+    .hero__hero {
+        margin: auto;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__content h1 {
+        font-size: 5rem;
+        color: var(--mainColor);
+        font-weight: 600;
+        transition: 0.5s;
+        letter-spacing: 2rem;
+    }
+}

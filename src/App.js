@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Footer from "./components/Footer";
+import {Helmet} from "react-helmet";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  return <div>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Květinový ateliér Poupě</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+      <meta name="description" content="Květinový ateliér Poupě v Dobřichovicích nabízí širokou nabídku květin. V nabídce máme kromě sezónních květin i stálou nabídku trvalek. Rádi Vám pomůžeme." />
+    </Helmet>
+    <Navbar />
+    <Hero />
+    <About />
+    <Footer />
+  </div>
 }
 
-export default App;
+export default App

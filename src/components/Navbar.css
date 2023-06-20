@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Italianno", sans-serif;
+}
+
+:root {
+	--mainColor: #ffffff;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #d88dc2;
+	--textColor: #000000;
+}
+
+.navbar__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 8%;
+	background: transparent;
+	color: var(--textColor);
+
+	z-index: 10;
+	top: 0;
+	left: 0;
+	position: fixed;
+}
+
+nav {
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	padding: 0px 8%;
+	justify-content: space-between;
+
+	position: fixed;
+	background-color: var(--mainColor);
+
+	cursor: pointer;
+}
+
+.navbar__logo {
+	max-width: 90px;
+	border-radius: 50%;
+}
+
+nav ul {
+	float: left;
+	padding-top: 1.5rem;
+}
+
+nav ul li {
+	list-style: none;
+	margin-left: 40px;
+	float: left;
+}
+
+nav ul li a {
+	color: var(--textColor);
+	text-decoration: none;
+    font-size: 2.7rem;
+}
+
+nav a:hover {
+	color: var(--secondaryColor);
+}
+
+header .navbar__nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 2.8rem;
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1320px) {
+	nav {
+		width: 100%;
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		padding: 0px 2%;
+		
+
+		position: fixed;
+		background-color: var(--mainColor);
+
+		cursor: pointer;
+	}
+}
+
+@media only screen and (max-width: 1024px) {	
+	header .navbar__nav-btn {
+		visibility: visible;
+		opacity: 1;
+		margin-top: 3rem;
+		margin-left: -2rem;
+		font-size: 2.5rem;
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+	}
+
+	header nav ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	header nav ul li {
+		padding-top: 2.5rem;
+	}
+
+
+
+	header nav img {
+		display: none;
+	}
+
+	header .navbar__responsive_nav {
+		transform: translateY(100vh);
+
+		width: 100%;  /* new */
+		height: 100vh;
+		padding: 0;
+		margin: 0;
+	}
+
+	nav .navbar__nav-close-btn {
+		position: absolute;
+		top: -2rem;
+		right: 5.5rem;
+	}
+
+	nav a {
+        margin-left: 0;
+		font-size: 3rem;
+	}
+}
